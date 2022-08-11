@@ -1,22 +1,18 @@
-import { useState } from 'react';
-import Login from './components/Login';
-import SecretStuff from './components/secretStuff'
-import './App.css';
+import { useState } from "react"
+import Login from "./components/Login"
+import SecretStuff from "./components/secretStuff"
+import "./App.css"
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   return (
     <>
-    <header>
-      <h1>My First Login</h1>
-    </header>
-    {isLoggedIn
-    
-    ?<SecretStuff/>
-    :<Login setIsLoggedIn={setIsLoggedIn}/>
-  }
+      <header>
+        <h1>My First Login</h1>
+      </header>
+      {isLoggedIn ? <SecretStuff /> : <Login setIsLoggedIn={setIsLoggedIn} />}
     </>
-  );
+  )
 }
 
-export default App;
+export default App
